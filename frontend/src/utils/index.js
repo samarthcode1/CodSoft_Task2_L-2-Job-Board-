@@ -15,7 +15,7 @@ export const apiRequest = async ({ url, token, data, method }) => {
             headers: {
                 "content-type": "application/json",
                 Authorization: token ? `Bearer ${token}` :
-                "",
+                    "",
             }
         });
         return result?.data;
@@ -26,6 +26,7 @@ export const apiRequest = async ({ url, token, data, method }) => {
     }
 
 };
+
 export const handleFileUpload = async (uploadFile) => {
     const formData = new FormData();
     formData.append("file", uploadFile);
