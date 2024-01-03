@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { BiChevronDown } from "react-icons/bi";
@@ -7,10 +9,15 @@ import { AiOutlineClose, AiOutlineLogout } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import CustomButton from "./CustomButton";
 import { users } from "../utils/data";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Logout } from "../redux/userSlice";
 
 function MenuList({ user, onClick }) {
-  const handleLogout = () => {};
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(Logout());
+    window.location.replace("/");
+  };
 
   return (
     <div>
@@ -97,7 +104,7 @@ function MenuList({ user, onClick }) {
   );
 }
 const Navbar = () => {
-  const user = useSelector((state) => state.user);
+  const {user} = useSelector((state) => state.user);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCloseNavbar = () => {
@@ -121,8 +128,12 @@ const Navbar = () => {
             <li>
               <Link to='/companies'>Companies</Link>
             </li>
+
             <li>
-              <Link to='/upload-job'>Upload Job</Link>
+              <Link to={user?.accountType === "seeker" ? "/applications": '/upload-job'}>
+                {user?.accountType === "seeker" ? "Applications":
+                "Upload Job"}
+              </Link>
             </li>
             <li>
               <Link to='/about-us'>About</Link>

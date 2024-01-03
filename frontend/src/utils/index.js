@@ -15,9 +15,10 @@ export const apiRequest = async ({ url, token, data, method }) => {
             headers: {
                 "content-type": "application/json",
                 Authorization: token ? `Bearer ${token}` :
-                    "",
+                "",
             }
         });
+        return result?.data;
     } catch (error) {
         const err = error.response.data;
         console.log(err);
@@ -28,13 +29,13 @@ export const apiRequest = async ({ url, token, data, method }) => {
 export const handleFileUpload = async (uploadFile) => {
     const formData = new FormData();
     formData.append("file", uploadFile);
-    formData.append("upload_preset", "jonfinder");
+    formData.append("upload_preset", "jobfinder");
 
     try {
         const response = await axios.post(
-        );
-        "https://api.cloudinary.com/v1_1/cloudName/image/upload / ",
+            "https://api.cloudinary.com/v1_1/dizs57l6a/image/upload / ",
             formData
+        );
         return response.data.secure_url;
     } catch (error) {
         console.log(error);
@@ -73,8 +74,8 @@ export const updateURL = ({
     }
 
 
-    const newURL=`${ location.pathname }?${params.
-    toString()}`;
+    const newURL = `${location.pathname}?${params.
+        toString()}`;
     navigate(newURL, { replace: true });
     return newURL;
 };
