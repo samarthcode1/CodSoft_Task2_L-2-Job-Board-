@@ -94,7 +94,7 @@ const FindJobs = () => {
   return (
     <div>
       <Header
-        title="Find Your Dream Job with Ease"
+        title="Find The Career You Deserve "
         type="home"
         handleClick={handleSearchSubmit}
         searchQuery={searchQuery}
@@ -165,7 +165,7 @@ const FindJobs = () => {
         <div className="w-full md:w-5/6 px-5 md:px-0">
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm md:text-base">
-              Shwoing: <span className="font-semibold">{recordCount}</span> Jobs
+              Showing: <span className="font-semibold">{recordCount}</span> Jobs
               Available
             </p>
 

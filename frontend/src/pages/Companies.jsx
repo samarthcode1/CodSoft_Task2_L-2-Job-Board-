@@ -61,7 +61,7 @@ const Companies = () => {
   return (
     <div className="w-full">
       <Header
-        title="Find Your Dream Company"
+        title="Get Your Dream Company"
         handleClick={handleSearchSubmit}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -72,7 +72,7 @@ const Companies = () => {
       <div className="container mx-auto flex flex-col gap-5 2xl:gap-10 px-5 py-6 bg-[#f7fdfd]">
         <div className="flex items-center justify-between mb-4">
           <p className="text-sm md:text-base">
-            Shwoing: <span className="font-semibold">{recordsCount}</span>{" "}
+            Showing: <span className="font-semibold">{recordsCount}</span>{" "}
             Companies Available
           </p>
 
