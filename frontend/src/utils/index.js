@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
-const API_URL = "http://localhost:8800/api-v1";
+const API_URL = "https://job-ahead.onrender.com/api-v1";
 
 export const API = axios.create({
     baseURL: API_URL,
