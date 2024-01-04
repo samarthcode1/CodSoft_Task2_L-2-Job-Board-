@@ -51,7 +51,6 @@ const CompnayForm = ({ open, setOpen }) => {
         setErrMsg({ ...res });
       } else {
         setErrMsg({ status: "success", message: res.message });
-        const newData = { token: res?.token, ...res?.user };
         dispatch(Login(newData));
         localStorage.setItem("userInfo", JSON.stringify(data));
 
@@ -176,15 +175,15 @@ const CompnayForm = ({ open, setOpen }) => {
                     </div>
 
                     <div className="mt-4">
-                      {/* {isLoading ? (
+                      {isLoading ? (
                         <Loading />
-                      ) : ( */}
+                      ) : (
                         <CustomButton
                           type="submit"
                           containerStyles="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-8 py-2 text-sm font-medium text-white hover:bg-[#1d4fd846] hover:text-[#1d4fd8] focus:outline-none "
                           title={"Submit"}
                         />
-                      {/* )} */}
+                      )}
                     </div>
                   </form>
                 </Dialog.Panel>

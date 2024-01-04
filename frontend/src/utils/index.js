@@ -16,7 +16,7 @@ export const apiRequest = async ({ url, token, data, method }) => {
                 "content-type": "application/json",
                 Authorization: token ? `Bearer ${token}` :
                     "",
-            }
+            },
         });
         return result?.data;
     } catch (error) {
@@ -34,7 +34,7 @@ export const handleFileUpload = async (uploadFile) => {
 
     try {
         const response = await axios.post(
-            "https://api.cloudinary.com/v1_1/dizs57l6a/image/upload / ",
+            "https://api.cloudinary.com/v1_1/dizs57l6a/image/upload/",
             formData
         );
         return response.data.secure_url;
@@ -49,7 +49,9 @@ export const updateURL = ({
     pageNum,
     query,
     cmpLoc,
-    sort, navigate, Location,
+    sort, 
+    navigate, 
+     Location,
     jType,
     exp,
 }) => {
@@ -76,7 +78,7 @@ export const updateURL = ({
 
 
     const newURL = `${location.pathname}?${params.
-        toString()}`;
+    toString()}`;
     navigate(newURL, { replace: true });
     return newURL;
 };
