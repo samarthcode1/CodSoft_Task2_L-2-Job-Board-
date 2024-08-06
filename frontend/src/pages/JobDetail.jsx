@@ -159,7 +159,9 @@ const JobDetail = () => {
                 <>
                   <p className="text-xl font-semibold">Job Decsription</p>
 
-                  <span className="text-base">{job?.detail[0]?.desc}</span>
+                  <span className="text-base">
+                    {job?.detail[0]?.desc}
+                    </span>
 
                   {job?.detail[0]?.requirements && (
                     <>

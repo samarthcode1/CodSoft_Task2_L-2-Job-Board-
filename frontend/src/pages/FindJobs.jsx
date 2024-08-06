@@ -90,7 +90,7 @@ const FindJobs = () => {
 
   useEffect(() => {
     fetchJobs();
-  }, [sort, filterJobTypes, filterExp, page]);
+  }, [sort, filterJobTypes, filterExp, page, fetchJobs]);
   return (
     <div>
       <Header

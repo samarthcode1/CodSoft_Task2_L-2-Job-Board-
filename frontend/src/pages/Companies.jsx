@@ -49,7 +49,7 @@ const Companies = () => {
     }
   };
 
-  const handleSearchSubmit = async(e) => {
+  const handleSearchSubmit = async (e) => {
     e.preventDefault();
     await fetchCompanies();
   };
