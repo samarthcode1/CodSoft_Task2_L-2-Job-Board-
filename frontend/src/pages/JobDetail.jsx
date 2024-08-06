@@ -97,35 +97,35 @@ const JobDetail = () => {
             </div>
 
             <div className="w-full flex flex-wrap md:flex-row gap-2 items-center justify-between my-10">
-              <div className="bg-[#bdf4c8] w-40 h-16 rounded-lg flex flex-col items-center justify-center">
+              <div className="bg-[#bdf4c8] w-40 h-16 p-2 rounded-lg flex flex-col items-center justify-center">
                 <span className="text-sm">Salary</span>
                 <p className="text-lg font-semibold text-gray-700">
                   $ {job?.salary}
                 </p>
               </div>
 
-              <div className="bg-[#bae5f4] w-40 h-16 rounded-lg flex flex-col items-center justify-center">
+              <div className="bg-[#bae5f4] w-40 h-16 p-2 rounded-lg flex flex-col items-center justify-center">
                 <span className="text-sm">Job Type</span>
                 <p className="text-lg font-semibold text-gray-700">
                   {job?.jobType}
                 </p>
               </div>
 
-              <div className="bg-[#fed0ab] w-40 h-16 px-6 rounded-lg flex flex-col items-center justify-center">
-                <span className="text-sm">No. of Applicants</span>
+              <div className="bg-[#fed0ab] w-40 h-16  pt-2  rounded-lg flex flex-col items-center justify-center">
+                <center><span className="text-sm">No. of Applicants</span></center>
                 <p className="text-lg font-semibold text-gray-700">
                   {job?.application?.length}
                 </p>
               </div>
 
-              <div className="bg-[#cecdff] w-40 h-16 px-6 rounded-lg flex flex-col items-center justify-center">
-                <span className="text-sm">No. of Vacancies</span>
+              <div className="bg-[#cecdff] w-40 h-16  p-2 rounded-lg flex flex-col items-center justify-center">
+                <center><span className="text-sm">No. of Vacancies</span></center>
                 <p className="text-lg font-semibold text-gray-700">
                   {job?.vacancies}
                 </p>
               </div>
-              <div className="bg-[#ffcddf] w-40 h-16 px-6 rounded-lg flex flex-col items-center justify-center">
-                <span className="text-sm">Years of Experience</span>
+              <div className="bg-[#ffcddf] w-40 h-16  p-2 rounded-lg flex flex-col items-center justify-center">
+                <center><span className="text-sm">Years of Experience</span></center>
                 <p className="text-lg font-semibold text-gray-700">
                   {job?.experience}
                 </p>
