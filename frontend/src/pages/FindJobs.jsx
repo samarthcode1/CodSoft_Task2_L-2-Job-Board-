@@ -103,10 +103,9 @@ const FindJobs = () => {
         setLocation={setJobLocation}
       />
 
-      <div className="container mx-auto flex gap-6 2xl:gap-10 md:px-5 py-0 md:py-6 bg-[#f7fdfd]">
-        <div className="hidden md:flex flex-col w-1/6 h-fit bg-white shadow-sm">
+      <div className="container mx-auto flex gap-6 2xl:gap-10 md:px-5 py-0 md:py-6  ">
+        <div className="hidden md:flex flex-col w-1/6 h-fit shadow-3xl p-2 shadow-gray-300">
           <p className="text-lg font-semibold text-slate-600">Filter Search</p>
-
           <div className="py-2">
             <div className="flex justify-between mb-3">
               <p className="flex items-center gap-2 font-semibold">

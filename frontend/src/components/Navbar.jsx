@@ -113,15 +113,15 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='relative bg-[#f7fdfd] z-50'>
-        <nav className='container mx-auto flex items-center justify-between p-5'>
+      <div className='  bg-transparent backdrop-blur-xl z-50 sticky rounded-md top-0'>
+        <nav className='container mx-auto flex items-center justify-between p-2 '>
           <div>
-            <Link to='/' className='text-blue-600 font-bold text-xl'>
+            <Link to='/' className='animate-pulse text-blue-700 font-bold text-3xl'>
               Job Ahead
             </Link>
           </div>
 
-          <ul className='hidden lg:flex gap-10 text-base'>
+          <ul className='hidden lg:flex gap-10 text-base text-xl'>
             <li>
               <Link to='/'>Find Job</Link>
             </li>

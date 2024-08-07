@@ -26,8 +26,7 @@ export const popularSearch = [
   "Full-Stack Developer",
   "Data Scientist",
   "Remote",
-  "Full-Time",
-  "Sales",
+  "Full-Time"
 ];
 
 export const jobs = [
